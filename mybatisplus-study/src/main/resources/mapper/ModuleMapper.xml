@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.ModuleMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Module">
+            <id property="moduleId" column="module_id" jdbcType="INTEGER"/>
+            <result property="moduleName" column="module_name" jdbcType="VARCHAR"/>
+            <result property="moduleUrl" column="module_url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        module_id,module_name,module_url
+    </sql>
+</mapper>

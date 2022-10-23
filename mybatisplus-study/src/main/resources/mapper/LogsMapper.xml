@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.LogsMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Logs">
+            <id property="logId" column="log_id" jdbcType="INTEGER"/>
+            <result property="moduleId" column="module_id" jdbcType="INTEGER"/>
+            <result property="teacherId" column="teacher_id" jdbcType="INTEGER"/>
+            <result property="logText" column="log_text" jdbcType="VARCHAR"/>
+            <result property="logTime" column="log_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        log_id,module_id,teacher_id,
+        log_text,log_time
+    </sql>
+</mapper>

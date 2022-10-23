@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Teacher">
+            <id property="teacherId" column="teacher_id" jdbcType="INTEGER"/>
+            <result property="teacherName" column="teacher_name" jdbcType="VARCHAR"/>
+            <result property="teacherAccount" column="teacher_account" jdbcType="VARCHAR"/>
+            <result property="teacherEmail" column="teacher_email" jdbcType="VARCHAR"/>
+            <result property="teacherPwd" column="teacher_pwd" jdbcType="VARCHAR"/>
+            <result property="power" column="power" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        teacher_id,teacher_name,teacher_account,
+        teacher_email,teacher_pwd,power
+    </sql>
+</mapper>

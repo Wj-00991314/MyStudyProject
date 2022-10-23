@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.PaperMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Paper">
+            <id property="paperId" column="paper_id" jdbcType="INTEGER"/>
+            <result property="paperName" column="paper_name" jdbcType="VARCHAR"/>
+            <result property="scoreSin" column="score_sin" jdbcType="INTEGER"/>
+            <result property="scoreChe" column="score_che" jdbcType="INTEGER"/>
+            <result property="scoreJug" column="score_jug" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        paper_id,paper_name,score_sin,
+        score_che,score_jug
+    </sql>
+</mapper>

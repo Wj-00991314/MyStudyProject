@@ -1,0 +1,64 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mybatisplus
+
+  #jackson时间格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  #数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oes?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: x@00991314=+//
+    druid:
+      validation-query: select 1
+      initial-size: 1
+      max-active: 2
+      min-idle: 1
+      keepAlive: true
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      poolPreparedStatements: false
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      filter:
+        stat:
+          db-type: mysql
+        wall:
+          enabled: true
+          db-type: mysql
+          config:
+            selectAllColumnAllow: false
+            selectIntoAllow: false
+            deleteAllow: true
+            replaceAllow: false
+            callAllow: false
+            truncateAllow: false
+            createTableAllow: false
+            alterTableAllow: false
+            dropTableAllow: false
+            useAllow: false
+            describeAllow: false
+            showAllow: false
+            constArithmeticAllow: false
+            deleteWhereNoneCheck: true
+            updateWhereNoneCheck: true
+            conditionAndAlwayTrueAllow: true
+            conditionAndAlwayFalseAllow: true
+            wrapAllow: false
+            logViolation: true
+
+
+#MyBatis Plus 的 SQL日志打印
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml

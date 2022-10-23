@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.QuestionMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Question">
+            <id property="questionId" column="question_id" jdbcType="INTEGER"/>
+            <result property="questionType" column="question_type" jdbcType="VARCHAR"/>
+            <result property="questionCourse" column="question_course" jdbcType="VARCHAR"/>
+            <result property="questionName" column="question_name" jdbcType="VARCHAR"/>
+            <result property="questionOpa" column="question_opa" jdbcType="VARCHAR"/>
+            <result property="questionOpb" column="question_opb" jdbcType="VARCHAR"/>
+            <result property="questionOpc" column="question_opc" jdbcType="VARCHAR"/>
+            <result property="questionOpd" column="question_opd" jdbcType="VARCHAR"/>
+            <result property="questionOpright" column="question_opright" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        question_id,question_type,question_course,
+        question_name,question_opa,question_opb,
+        question_opc,question_opd,question_opright
+    </sql>
+</mapper>

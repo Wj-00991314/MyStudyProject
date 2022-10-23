@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.ClaaccMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Claacc">
+            <id property="clasaccId" column="clasacc_id" jdbcType="INTEGER"/>
+            <result property="examName" column="exam_name" jdbcType="VARCHAR"/>
+            <result property="claId" column="cla_id" jdbcType="INTEGER"/>
+            <result property="toscPer" column="tosc_per" jdbcType="INTEGER"/>
+            <result property="acscPer" column="acsc_per" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        clasacc_id,exam_name,cla_id,
+        tosc_per,acsc_per
+    </sql>
+</mapper>

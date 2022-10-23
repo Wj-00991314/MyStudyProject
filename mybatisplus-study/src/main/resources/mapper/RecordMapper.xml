@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.mybatisplus.mapper.RecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.wj.mybatisplus.entity.Record">
+            <id property="recordId" column="record_id" jdbcType="INTEGER"/>
+            <result property="recordName" column="record_name" jdbcType="VARCHAR"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+            <result property="paperId" column="paper_id" jdbcType="INTEGER"/>
+            <result property="recordAnswer" column="record_answer" jdbcType="VARCHAR"/>
+            <result property="recordAcc" column="record_acc" jdbcType="DOUBLE"/>
+            <result property="recordScore" column="record_score" jdbcType="INTEGER"/>
+            <result property="submitTime" column="submit_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        record_id,record_name,student_id,
+        paper_id,record_answer,record_acc,
+        record_score,submit_time
+    </sql>
+</mapper>
